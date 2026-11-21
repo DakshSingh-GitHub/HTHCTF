@@ -1,0 +1,14 @@
+LAPD INTAKE TELEX - ATTACHMENT 1 OF 1
+RE: TYRELL PRESS KIT PX-2049-0119 (NEXUS-6 LAUNCH)
+DATE: 2019-11-20   DESK: HTH26-SUV   REF: 34b7b709
+
+RADIO LOG (RECOVERED FROM THE KIT):
+ 21:14  spinner departures, whiteout on channel 2
+ 21:31  relay burst, ninety seconds, logged as L1-SPINNER
+ 21:47  photo unit sealed the kit
+
+INTAKE CODEWORD (SEAL): HTH3{3v3ry_f13ld_w4s_r34d_qgqn1j}
+
+desk note: codeword confirms the press-kit seizure.
+locker packet L1-SPINNER is queued for the next bench.
+-- END OF TELEX --

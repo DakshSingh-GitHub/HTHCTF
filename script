@@ -1,0 +1,10 @@
+Find hidden files	find . -type f -print
+Extract strings	strings file.bin
+Inspect file type	file file.bin
+Check metadata	exiftool image.jpg
+Inspect binary	xxd file.bin
+Search for flag patterns	grep -RohE 'HTH3\{[^}]+\}' .
+Inspect archive	unzip -l file.zip
+Calculate checksum	shasum -a 256 file
+Inspect embedded files	binwalk file.bin
+Inspect audio	ffmpeg -i audio.wav

@@ -1,0 +1,2 @@
+/opt/homebrew/bin/python3.13 packet_detective.py analyze spin.pcapng
+
