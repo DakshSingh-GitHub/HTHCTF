@@ -342,7 +342,7 @@ class PacketDetectiveTestSuite(unittest.TestCase):
         self.assertIn("Suspicious DNS", categories)
 
     def test_malformed_truncated_pcap_handled_gracefully(self) -> None:
-        valid_frame = build_udp_frame("10.0.0.1", "10.0.0.2", 1234, 5678, b"HTF{before_corruption}", ip_id=1)
+        valid_frame = build_udp_frame("10.0.0.1", "10.0.0.2", 1234, 5678, b"HTH3{before_corruption}", ip_id=1)
         pcap = write_pcap(self.tmp_path / "truncated.pcap", [valid_frame])
         # Append a truncated packet record header claiming 500 bytes but only providing 12
         corrupted = pcap.read_bytes() + b"\x00\x00\x00\x00\x00\x00\x00\x00\xf4\x01\x00\x00\xf4\x01\x00\x00" + (b"\xff" * 12)
@@ -350,7 +350,7 @@ class PacketDetectiveTestSuite(unittest.TestCase):
 
         report = PacketDetectiveAnalyzer().analyze(pcap)
         self.assertGreaterEqual(report.summary.total_packets, 1)
-        self.assertTrue(any(c.value == "HTF{before_corruption}" for c in report.flag_candidates))
+        self.assertTrue(any(c.value == "HTH3{before_corruption}" for c in report.flag_candidates))
         self.assertTrue(len(report.summary.warnings) >= 1)
 
     def test_empty_captures(self) -> None:
@@ -372,12 +372,19 @@ class PacketDetectiveTestSuite(unittest.TestCase):
             build_udp_frame("10.2.0.1", "10.2.0.2", 30000 + (i % 100), 8125, b"metric:ok", ip_id=i + 1)
             for i in range(2500)
         ]
-        frames.append(build_udp_frame("10.2.0.1", "10.2.0.2", 31000, 8125, b"HTF{large_stream_end}", ip_id=2600))
+        frames.append(build_udp_frame("10.2.0.1", "10.2.0.2", 31000, 8125, b"HTH3{large_stream_end}", ip_id=2600))
         pcap = write_pcap(self.tmp_path / "large.pcap", frames)
 
         report = PacketDetectiveAnalyzer().analyze(pcap)
         self.assertEqual(report.summary.total_packets, 2501)
-        self.assertTrue(any(c.value == "HTF{large_stream_end}" for c in report.flag_candidates))
+        self.assertTrue(any(c.value == "HTH3{large_stream_end}" for c in report.flag_candidates))
+
+    def test_custom_flag_prefix_override(self) -> None:
+        frame = build_udp_frame("10.0.0.1", "10.0.0.2", 1234, 5678, b"CUSTOM{flag_with_different_prefix}", ip_id=1)
+        pcap = write_pcap(self.tmp_path / "custom.pcap", [frame])
+        analyzer = PacketDetectiveAnalyzer(flag_prefix="CUSTOM")
+        report = analyzer.analyze(pcap)
+        self.assertTrue(any(c.value == "CUSTOM{flag_with_different_prefix}" for c in report.flag_candidates))
 
     def test_missing_tshark_raises_with_install_instructions(self) -> None:
         with mock.patch("core.tshark.shutil.which", return_value=None), mock.patch(
