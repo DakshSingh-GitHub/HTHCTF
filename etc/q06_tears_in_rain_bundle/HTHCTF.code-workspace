@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "HTHCTF",
+			"path": "../.."
+		},
+		{
+			"name": "q06_tears_in_rain_bundle",
+			"path": "../../../../../Downloads/q06_tears_in_rain_bundle"
+		}
+	],
+	"settings": {
+		"python-envs.defaultEnvManager": "ms-python.python:system"
+	}
+}

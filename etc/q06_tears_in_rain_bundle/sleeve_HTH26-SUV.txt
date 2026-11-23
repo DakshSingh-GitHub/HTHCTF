@@ -1,0 +1,47 @@
+RECOVERED RECORD SLEEVE - N6 MEMORY BANK, SLOT 7
+serial 510001 - desk HTH26-SUV - logged 2019-11-21 22:04
+
+side A - "the night it rained" (2:00)
+  rain. under it, a long musical sweep that is not music.
+
+the memory was sent home the old way: PICTURES AS SOUND, slow-scan
+television, SCOTTIE 1 mode - the sweep announces itself (calibration
+tones, then the mode code). decode the sweep and the picture is the
+terminal card.
+
+bench note - THE TAPE WAS RE-SPLICED WRONG: it is recycled stock and
+the bench stacked its SIXTEEN bands back out of order (every desk's
+splice came out differently). the mended picture shows the card as
+filed; the scrambled one shows every line torn across a splice. the
+picture's own rows are the truth test - when the splice runs true,
+the printed rules and the type line up; mend it and quote the seal.
+
+the bench ledger - margin marks, top to bottom as filed
+  band  0  margin mark: 8
+  band  1  margin mark: e
+  band  2  margin mark: 3
+  band  3  margin mark: 1
+  band  4  margin mark: c
+  band  5  margin mark: 7
+  band  6  margin mark: a
+  band  7  margin mark: 0
+  band  8  margin mark: 5
+  band  9  margin mark: f
+  band 10  margin mark: 2
+  band 11  margin mark: b
+  band 12  margin mark: 9
+  band 13  margin mark: d
+  band 14  margin mark: 6
+  band 15  margin mark: 4
+
+side B - the marshal's receipt
+  received sealed, played once. nothing on this tape is spoken: the
+  window's 1500 hz test tone closes it. what was sent, decoded;
+  what was scrambled, mended.
+
+bench notes:
+  - broadcast test transmission, advisory code HTH3{wr0ng_r3c0rd_k33p_l00k1ng_12luvc}
+    (the weather desk's weekly test; void at any window)
+  - this tape was recycled once, stamp HTH3{v01d_s34l_d0_n0t_qu0t3_fiyspo}
+    (recycled media cannot carry a live seal - which is why the
+    bench re-spliced it; the FILED seal rides the mended picture)

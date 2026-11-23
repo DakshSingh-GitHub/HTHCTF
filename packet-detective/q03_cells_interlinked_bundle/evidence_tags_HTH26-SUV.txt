@@ -1,0 +1,17 @@
++--------------------------------------------------+
+| EVIDENCE TAG -      L1 BASELINE TRANSCRIPT       |
+| CASE L1-BASELINE  DESK HTH26-SUV SERIAL 58909075 |
+|                                                  |
+| SEAL: FILED IN MACHINE NOTATION |
+|                                                  |
+| decode the transcript and quote its seal.       |
++--------------------------------------------------+
+
++--------------------------------------------------+
+| EVIDENCE TAG -       L1 SPINNER MAINT LOG        |
+| CASE L1-SPINNER-MAINT DESK   T90* SERIAL 87bf108e |
+|                                                  |
+| SEAL: HTH3{n0t_th3_l1v3_s34l_k368sa} |
+|                                                  |
+| misroute copy - original filed at bench 3; window already quoted. |
++--------------------------------------------------+
